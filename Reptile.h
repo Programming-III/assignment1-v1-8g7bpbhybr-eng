@@ -1,16 +1,25 @@
-#ifndef REPTILE_H
-#define REPTILE_H
+#ifndef Reptile_H
+#define Reptile_H
+#include <iostream>
+#include <string>
+using namespace std;
 
-#include "Animal.h"
+class Reptile : public Animal {
+private:
+bool isVenomous;
 
-//define reptile class here
+public:
+  
+Reptile();
+Reptile(string name, int age, bool isHungry, bool isVenomous);
+~Reptile();
 
+ 
+bool getIsVenomous() const;
+void setIsVenomous(bool isVenomous);
 
+  
+void display();
+};
 
-
-
-
-
-
-
-#endif
+#endif Reptile_H
